@@ -26,6 +26,6 @@ app.use("/api/conversation", conversationRoute)
 app.use("/api/message", MessageRoute)
 app.use("/api/allusers", allUeerRoute)
 
-app.listen(8000, ()=>{
+app.listen(process.env.PORT || 8000, ()=>{
     console.log("server is running at 8000");
 })
