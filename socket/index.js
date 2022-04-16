@@ -35,19 +35,16 @@ const filterUserList = ((sid)=>{
 io.on("connection", (socket) => {
     socket.on("sendId", userId=>{
         addUsers(userId, socket.id)
-        //console.log( "user connected", user)
         io.emit("getUsers", user)
     })
     socket.on("disconnect", () => {
         removeUser(socket.id)
         filterUserList(socket.id)
-        //console.log("user Disconnected", socket.id)
         io.emit("getUsers", user)
         io.emit("filteredUsers", userList)
     })
     socket.on("sendMessage", ({senderId, recieverId, text})=>{
         const singleUser = getUser(recieverId)
-        //console.log('tttt',singleUser?.socketid, text);
         const receiverSocketId = singleUser?.socketid
         socket.broadcast.emit("getMessage", {
             senderId,
@@ -55,15 +52,12 @@ io.on("connection", (socket) => {
             recieverId,
             receiverSocketId,
         })
-        //console.log(text, 'text', senderId, recieverId, singleUser);
     })
     socket.on("sendUserData",(userData)=>{
-        //console.log   (userData.user?.name);
         addUserList(userData.user._id, userData?.user.name, socket.id)
         io.emit("userList", userList)
     })
     socket.on("newUser", (newUser)=>{
-        //console.log(newUser.newUser);
         socket.broadcast.emit("newuser", newUser.newUser)
     })
 })
