@@ -1,0 +1,76 @@
+.messageContainer{
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.username{
+	height: 5.5%;
+	width: 100%;
+	background-color: rgb(253, 42, 42);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.username a{
+    margin-right: 2%;
+}
+.name, .logout{
+	color: white
+}
+.name{
+	margin-left: 2%;
+	font-size: 1em;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+}
+.name div{
+	margin-left: 5px;
+}
+.messagefield{
+	width: 100%;
+	height: 100%;
+	overflow-y: scroll;
+    background-color: rgb(247, 247, 252);
+	box-shadow: 10px 15px 15px -20px rgb(0,0,0) inset;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.owntextmessage{
+	margin: 10px 0px;
+	width: 90%;
+	display: flex;
+	justify-content: flex-end;
+}
+.textmessage{
+	margin: 10px 0px;
+	width: 90%;
+	display: flex;
+	justify-content: flex-start;
+}
+.footer{
+    height: 7%;
+	width: 100%;
+	display: flex;
+}
+.textarea{
+	font-size: 18px;
+	width: 100%;
+	resize: none;
+	display: block;
+	overflow: hidden;
+	padding: 10px;
+	font-family: 'Rubik', sans-serif;
+}
+.textarea:focus{
+	outline: none;
+}
+.button{
+    height: 100%;
+	width: 12%;
+	background-color: red;
+	color: white;
+	border: none;
+}
