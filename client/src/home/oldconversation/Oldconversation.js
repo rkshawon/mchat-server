@@ -28,16 +28,16 @@ function Oldconversation({getMgsfromOdlconversation, Con}) {
 
 
     const getallUsers = async ()=>{
-      const getalluser = await axios.get("http://localhost:8000/allusers")
-      const owninfo = await axios.get("http://localhost:8000/allusers/"+user._id)
+      const getalluser = await axios.get("https://mchat-api.herokuapp.com/allusers")
+      const owninfo = await axios.get("https://mchat-api.herokuapp.com/allusers/"+user._id)
       getalluser.data.map( async u =>{
         const startConversation = {
           senderId: user._id,
           receiverId: u._id
         }
-        owninfo.data.firstTime && user._id !== u._id && await axios.post("http://localhost:8000/conversation", startConversation)
+        owninfo.data.firstTime && user._id !== u._id && await axios.post("https://mchat-api.herokuapp.com/conversation", startConversation)
       })
-      await axios.put("http://localhost:8000/allusers/"+user?._id)
+      await axios.put("https://mchat-api.herokuapp.com/allusers/"+user?._id)
     }
     getallUsers()
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -57,7 +57,7 @@ function Oldconversation({getMgsfromOdlconversation, Con}) {
       clearInterval(getConversation);
       return
     }
-     const res = await axios.get('http://localhost:8000/conversation/'+user?._id)
+     const res = await axios.get('https://mchat-api.herokuapp.com/conversation/'+user?._id)
      setConversation(res.data)
    }
    setInterval(getConversation, 500)
@@ -65,7 +65,7 @@ function Oldconversation({getMgsfromOdlconversation, Con}) {
 
   useEffect(()=>{
     const getConversation = async ()=>{
-     const res = await axios.get('http://localhost:8000/conversation/'+user?._id)
+     const res = await axios.get('https://mchat-api.herokuapp.com/conversation/'+user?._id)
      setConversation(res.data)
    }
    setTimeout(getConversation, 1000)
@@ -74,7 +74,7 @@ function Oldconversation({getMgsfromOdlconversation, Con}) {
 
   useEffect(()=>{
     const getMessage = async ()=>{
-      const mgs = await axios.get("http://localhost:8000/message/"+chat?._id)
+      const mgs = await axios.get("https://mchat-api.herokuapp.com/message/"+chat?._id)
       getMgsfromOdlconversation(mgs.data)
     }
     getMessage()

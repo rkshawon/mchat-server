@@ -44,7 +44,7 @@ function Message({messageDisplay, conversation}) {
 useEffect(()=>{
   const getOnscreenUserinfo = async ()=>{
     if(mgstoDisplay){
-      const onScreenUser = await axios.get('http://localhost:8000/auth/' + mgstoDisplay)
+      const onScreenUser = await axios.get('https://mchat-api.herokuapp.com/auth/' + mgstoDisplay)
         setActiveUser(onScreenUser.data)
     }
   }
@@ -68,7 +68,7 @@ useEffect(()=>{
         recieverId: reciever,
         text:text
       })
-        await axios.post("http://localhost:8000/message", messageToSend)
+        await axios.post("https://mchat-api.herokuapp.com/message", messageToSend)
         setSingleMgs([...singleMgs, messageToSend])
         setText('')
     }

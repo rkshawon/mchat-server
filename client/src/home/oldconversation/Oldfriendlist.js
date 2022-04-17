@@ -23,7 +23,7 @@ function Oldfriendlist({c, userid}) {
         const frnd = c.members.find(m=> m!==userid)
         //console.log(frnd, "fdfd");
         const getUser = async ()=>{
-            const getFriendinfo = await axios.get('/auth/'+frnd)
+            const getFriendinfo = await axios.get('https://mchat-api.herokuapp.com/auth/'+frnd)
             //console.log("fdata",getFriendinfo.data);
             setFriend(getFriendinfo.data)
         }

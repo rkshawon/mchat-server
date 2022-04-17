@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import './register.css'
 
@@ -126,7 +126,7 @@ function Register() {
 
     formValidation()
     if(!errorContainer()){
-      const reg = await axios.post('http://localhost:8000/auth/register', userInfo)
+      const reg = await axios.post('https://mchat-api.herokuapp.com/auth/register', userInfo)
       reg && navigate('/login')
     }
   }
