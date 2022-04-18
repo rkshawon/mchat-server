@@ -139,9 +139,9 @@ function Register() {
               <small >{errorMessageName}</small>
             <input type = 'text' placeholder='Enter Email' className='inputemail' ref = {email}/>
               <small >{errorMessageEmail}</small>
-            <input type = "text" placeholder='Enter Password' className='inputpass' ref = {password}/>
+            <input type = "password" placeholder='Enter Password' className='inputpass' ref = {password}/>
               <small >{errorMessagePass}</small>
-            <input type = "text" placeholder='Confirm Password' className='inputpass2' ref = {confirmPassword}/>
+            <input type = "password" placeholder='Confirm Password' className='inputpass2' ref = {confirmPassword}/>
               <small >{errorMessagePass2}</small>
             <button className='registerBtn' onClick={handleRegisterClick}>Register</button>
             <div className="logintoaccount">

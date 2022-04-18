@@ -5,6 +5,7 @@
 	border-radius: 5px;
 	padding: 5px;
 	margin-top: 10px;
+	word-break: break-all;
 }
 .ownmgs{
 	max-width: 95%;
