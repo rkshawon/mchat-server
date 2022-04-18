@@ -103,7 +103,7 @@ useEffect(()=>{
               sendMessage()
           }}} 
           ></textarea>
-          <button className="button" onClick={sendMessage}> <BiSend size='4vmin' />
+          <button className="button" onClick={sendMessage}> <BiSend className='bicon' />
           </button>
         </div>
       </div>
