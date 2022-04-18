@@ -84,7 +84,7 @@ function Oldconversation({getMgsfromOdlconversation, Con}) {
   return (
     <div className='oldconversation'>
       <div className='oldconversationheader'>
-        <BiConversation />
+        <BiConversation className='conicon'/>
         <h3> Old Conversation</h3>
       </div>
       <div className="conversationContainer">

@@ -56,5 +56,10 @@
 }
 
 @media screen and (max-width: 768px) {
-    .oldconversation h3{ font-size: 100%;}
+    .oldconversation h3{ font-size: 90%;}
+    .conicon{font-size: 120%;}
+}
+@media screen and (max-width: 380px) {
+    .oldconversation h3{ font-size: 110%;}
+    .conicon{font-size: 170%;}
 }
