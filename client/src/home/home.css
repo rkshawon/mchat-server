@@ -23,7 +23,7 @@
 @media screen and (max-width: 768px) {
     .appname{ display: none}
     .homeContainer{
-        height: 100%;
+        height: 70%;
         width: 100%;
     }
 }
