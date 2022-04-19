@@ -91,13 +91,7 @@ function Login() {
     <div className='loginContainer'>
         <div className='loginSection'>
             <h2>Login</h2>
-            <input type = 'text' placeholder='email' className='userinput' ref = {email}
-              onKeyPress = {(e)=>{
-              
-              if(e.key==="Enter")
-                console.log('called')
-              }
-            }/>
+            <input type = 'text' placeholder='email' className='userinput' ref = {email}/>
             <small >{errorMessageEmail}</small>
             <input type = "password" placeholder='password' className='passinput' ref = {password}/>
             <small >{errorMessagePass}</small>
@@ -106,7 +100,6 @@ function Login() {
             <Link to ='/register'>Create New Account</Link>
             <small className="small">{serverError}</small>
           </div>
-          
         </div>
     </div>
   )

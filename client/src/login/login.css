@@ -44,10 +44,6 @@ input,  button{
 }
 .small{
     margin-top: 20px;
-
-}
-.loginSection .hidesmall{
-    display: none;
 }
 .loginBtn{
     height: 12%;
@@ -73,4 +69,13 @@ input,  button{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+}
+@media screen and (max-width: 480px) {
+    .loginSection{
+        height: 50%;
+        width: 90%;
+    }
+    .loginBtn{
+        font-size: 1.5em;
+    }
 }

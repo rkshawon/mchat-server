@@ -68,3 +68,12 @@ small{
     margin-top: 5%;
     font-weight: 600;
 }
+@media screen and (max-width: 480px) {
+    .registerSection{
+        height: 80%;
+        width: 90%;
+    }
+    .registerBtn{
+        font-size: 1.5em;
+    }
+}

@@ -77,8 +77,7 @@ useEffect(()=>{
       scrollRef?.current?.scrollIntoView()
     },[text, singleMgs])
 
-  return (
-   
+  return ( 
       <div className="messageContainer">
         <div className="username">
           <div className='name'> <CgProfile/> <div> {activeUser.name}</div></div>
@@ -92,8 +91,9 @@ useEffect(()=>{
                 <MessageDisplay  singlemgs = {smgs} user={user}/>
               </div>
               )
-           })
+           }) 
          }
+         {activeUser?.name?.length? '': <h1>Start Conversation</h1>}
         </div>
         <div className="footer">
           <textarea className='textarea' value={text} onChange={(e)=>setText(e.target.value)} placeholder = "Write your message"
@@ -109,5 +109,4 @@ useEffect(()=>{
       </div>
   )
 }
-
 export default Message

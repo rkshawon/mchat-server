@@ -77,8 +77,13 @@
 .bicon{
 	font-size: 200%;
 }
+.messagefield h1{
+	color: rgb(201, 201, 201);
+	font-size: 200%;
+}
 @media screen and (max-width: 768px) {
 	.textarea{font-size: 14px;}
 	.bicon{font-size: 200%;}
 	.button{width: 20%;}
+	.messagefield h1{font-size: 150%;}
 }
