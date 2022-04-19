@@ -77,3 +77,9 @@ small{
         font-size: 1.5em;
     }
 }
+@media screen and (max-height: 480px){
+    .registerContainer{
+        overflow-y: scroll;
+    }
+    
+}

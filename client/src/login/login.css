@@ -79,3 +79,9 @@ input,  button{
         font-size: 1.5em;
     }
 }
+@media screen and (max-height: 480px){
+    .loginContainer{
+        overflow-y: scroll;
+    }
+    
+}
