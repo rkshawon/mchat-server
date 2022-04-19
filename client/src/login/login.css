@@ -83,5 +83,7 @@ input,  button{
     .loginContainer{
         overflow-y: scroll;
     }
-    
+    .loginSection{
+        height: 100%;
+    }
 }

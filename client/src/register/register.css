@@ -81,5 +81,8 @@ small{
     .registerContainer{
         overflow-y: scroll;
     }
+    .registerSection{
+        height: 100%;
+    }
     
 }
