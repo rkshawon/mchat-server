@@ -57,7 +57,7 @@ useEffect(()=>{
   }
   const reciever = conversation.members?.find(m=> m !== user._id)
   const sendMessage = async ()=>{
-    if(text.length > 0){
+    if(text.length > 0 && activeUser){
       const messageToSend = {
         conversationId: idToSend,
         senderId: user._id,
