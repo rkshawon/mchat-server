@@ -28,9 +28,9 @@ function Register() {
     }
     else{
       console.log('ok',name.current.value.length)
-      if(name.current.value.length > 10){
+      if(name.current.value.length > 21){
         ename = true
-        setErrorMessageName("Name must be less than 10 characters")
+        setErrorMessageName("Name must be less than or equal 20 characters")
       }
       else{
         ename = false
