@@ -18,9 +18,13 @@
 .name, .logout{
 	color: white
 }
+.menu{
+	font-size: 2rem;
+	margin-right: 10px;
+}
 .name{
 	margin-left: 2%;
-	font-size: 1em;
+	font-size: 1.5em;
 	font-weight: bold;
 	display: flex;
 	align-items: center;
@@ -86,4 +90,9 @@
 	.bicon{font-size: 200%;}
 	.button{width: 20%;}
 	.messagefield h1{font-size: 150%;}
+}
+@media screen and (min-width: 480px) {
+	.menu{
+		display: none;
+	}
 }

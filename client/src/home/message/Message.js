@@ -4,11 +4,11 @@ import {io} from 'socket.io-client'
 import { Context } from '../../context/AuthContext';
 import './message.css'
 import MessageDisplay from './MessageDisplay'
-import {BiSend} from "react-icons/bi"
+import {BiSend, BiMenu} from "react-icons/bi"
 import {FiLogOut} from "react-icons/fi"
 import {CgProfile} from "react-icons/cg"
 
-function Message({messageDisplay, conversation}) {
+function Message({messageDisplay, conversation, openMenu}) {
   const [singleMgs, setSingleMgs] = useState([])
   const {user} = useContext(Context)
   const [text, setText] = useState('')
@@ -80,7 +80,7 @@ useEffect(()=>{
   return ( 
       <div className="messageContainer">
         <div className="username">
-          <div className='name'> <CgProfile/> <div> {activeUser.name}</div></div>
+          <div className='name'> <BiMenu onClick={openMenu}  className="menu"/> <CgProfile/> <div> {activeUser.name}</div></div>
           <a href ="/login" style={{ color:'inherit', textDecoration:'inherit'}}><div className='logout' onClick={logOut}><FiLogOut size="1.5em" /></div></a>
        </div>
         <div className="messagefield">

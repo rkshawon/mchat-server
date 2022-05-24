@@ -7,7 +7,7 @@ import Oldfriendlist from './Oldfriendlist';
 import {BiConversation} from "react-icons/bi"
 
 
-function Oldconversation({getMgsfromOdlconversation, Con}) {
+function Oldconversation({getMgsfromOdlconversation, Con, menuOnOff}) {
   const [conversation, setConversation] = useState([])
   const [chat, setChat] = useState()
   const [newUser, setNewUser] = useState()
@@ -82,10 +82,10 @@ function Oldconversation({getMgsfromOdlconversation, Con}) {
   },[chat])
 
   return (
-    <div className='oldconversation'>
+    <div className={menuOnOff === true?'oldconversation':'oldconversation menuHide'}>
       <div className='oldconversationheader'>
         <BiConversation className='conicon'/>
-        <h3> Old Conversation</h3>
+        <h3>Friends</h3>
       </div>
       <div className="conversationContainer">
         {conversation.map((c, index)=>{

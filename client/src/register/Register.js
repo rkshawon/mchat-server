@@ -22,16 +22,21 @@ function Register() {
       else
         return false
     }
-
     if(!validateName()){
       ename = true
       setErrorMessageName("Only Characters A-Z, a-z and '-' are  acceptable.")
     }
     else{
-      ename = false
-      setErrorMessageName("")
+      console.log('ok',name.current.value.length)
+      if(name.current.value.length > 10){
+        ename = true
+        setErrorMessageName("Name must be less than 10 characters")
+      }
+      else{
+        ename = false
+        setErrorMessageName("")
+      }
     }
-
   }
   const emailCheck = ()=>{
     const validateEmail = () => {
@@ -77,7 +82,7 @@ function Register() {
     if(name.current.value ===''){
       ename = true
       setErrorMessageName("Name can not be empty")
-    }
+    }  
     else{
       nameCheck()
     }
