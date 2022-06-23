@@ -6,7 +6,7 @@ function MessageDisplay({singlemgs, user}) {
   
   return (
       <div className="messagebox">
-        <div className={singlemgs.senderId !== user._id ? "mgs" : "ownmgs"}>{singlemgs.text}</div>
+        <span className={singlemgs.senderId !== user._id ? "mgs" : "ownmgs"}>{singlemgs.text} </span>
         <div className="time">
           <Time value={singlemgs.createdAt} format="YYYY/MM/DD hh:mm" />
         </div>

@@ -1,5 +1,4 @@
 .mgs{
-	max-width: 90%;
 	background-color: rgb(136, 135, 135);
 	color: white;
 	border-radius: 5px;
@@ -8,7 +7,6 @@
 	word-break: break-all;
 }
 .ownmgs{
-	max-width: 95%;
 	color: white;
 	border-radius: 5px;
 	padding: 5px;
