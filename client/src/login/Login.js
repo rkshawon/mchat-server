@@ -91,9 +91,11 @@ function Login() {
     <div className='loginContainer'>
         <div className='loginSection'>
             <h2>Login</h2>
-            <input type = 'text' placeholder='email' className='userinput' ref = {email}/>
+            <input type = 'text' placeholder='email' className='userinput' ref = {email}
+              onClick= {()=>{setErrorMessageEmail(''); setServerError('')}}/>
             <small >{errorMessageEmail}</small>
-            <input type = "password" placeholder='password' className='passinput' ref = {password}/>
+            <input type = "password" placeholder='password' className='passinput' ref = {password}
+              onClick= {()=>{setErrorMessagePass(''); setServerError('')}}/>
             <small >{errorMessagePass}</small>
             <button className='loginBtn' onClick={handleLoginClick} >Login</button>
           <div className="createNewid">

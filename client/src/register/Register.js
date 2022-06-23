@@ -13,6 +13,7 @@ function Register() {
   const [errorMessageEmail, setErrorMessageEmail] = useState('')
   const [errorMessagePass, setErrorMessagePass] = useState('')
   const [errorMessagePass2, setErrorMessagePass2] = useState('')
+  const [serverError, setServerError] = useState('')
   let ename, eemail, epass, epass2 = true
 
   const nameCheck = ()=>{
@@ -140,15 +141,20 @@ function Register() {
     <div className='registerContainer'>
         <div className='registerSection'>
             <h2>Register</h2>
-            <input type = 'text' placeholder='Enter Name' className='inputname' ref = {name}/>
+            <input type = 'text' placeholder='Enter Name' className='inputname' ref = {name}
+            onClick= {()=>{setErrorMessageName(''); setServerError('')}}/>
               <small >{errorMessageName}</small>
-            <input type = 'text' placeholder='Enter Email' className='inputemail' ref = {email}/>
+            <input type = 'text' placeholder='Enter Email' className='inputemail' ref = {email}
+            onClick= {()=>{setErrorMessageEmail(''); setServerError('')}}/>
               <small >{errorMessageEmail}</small>
-            <input type = "password" placeholder='Enter Password' className='inputpass' ref = {password}/>
+            <input type = "password" placeholder='Enter Password' className='inputpass' ref = {password}
+            onClick= {()=>{setErrorMessagePass(''); setServerError('')}}/>
               <small >{errorMessagePass}</small>
-            <input type = "password" placeholder='Confirm Password' className='inputpass2' ref = {confirmPassword}/>
+            <input type = "password" placeholder='Confirm Password' className='inputpass2' ref = {confirmPassword}
+            onClick= {()=>{setErrorMessagePass2(''); setServerError('')}}/>
               <small >{errorMessagePass2}</small>
             <button className='registerBtn' onClick={handleRegisterClick}>Register</button>
+            <small className="small">{serverError}</small>
             <div className="logintoaccount">
             <Link to ='/login'>Already Member? Login</Link>
           </div>
